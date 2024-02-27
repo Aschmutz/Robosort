@@ -3,53 +3,10 @@
   "outputFolder":"Rendered Images",
   "operations":[
     {
-      "simulationTime":0.1,
-      "amount":1,
-      "rotationType":"initial",
-      "rotation":{"x":1,"y":2,"z":3}
-    },
-    {
-      "simulationTime":-1,
-      "amount":5,
-      "rotationType":"random",
-      "rotation":{"x":1,"y":2,"z":3}
-    },
-    {
-      "simulationTime":0,
-      "amount":1,
-      "rotationType":"custom",
-      "rotation":{"x":90,"y":43,"z":112}
-    },
-    {
-      "simulationTime":0,
-      "amount":1,
-      "rotationType":"copmuted"
-    },
-    {
-      "simulationSpeed":0.5,
-      "simulationTime":0.5,
-      "amount":2,
-      "rotationType":"custom",
-      "rotation":{"x":-90,"y":-143,"z":202}
-    },
-    {
-      "simulationSpeed":2,
-      "simulationTime":0.5,
-      "amount":1,
-      "rotationType":"custom",
-      "rotation":{"x":-90,"y":-143,"z":202}
-    },
-    {
-      "simulationSpeed":90,
-      "simulationTime":3,
-      "amount":10,
-      "rotationType":"random"
-    },
-    {
+      "simulationTime":1,
       "simulationSpeed":99,
-      "simulationTime":3,
-      "amount":1,
-      "rotationType":"initial"
+      "amount":15,
+      "rotationType":"random"
     }
   ]
 }
