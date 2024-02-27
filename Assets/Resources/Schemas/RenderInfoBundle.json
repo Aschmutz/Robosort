@@ -1,0 +1,80 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "RenderInfoBundle.json",
+  "$description":"RenderInformation fo the render Queue",
+  "$defs":{
+    "RenderInformation":{
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "RenderInformation",
+      "description": "The Information for a RenderQueue",
+      "type": "object",
+      "properties":{
+        "inputFolder":{
+          "description":"The local path to the Folder Containing the Alembic Models",
+          "type":"string"
+        },
+        "outputFolder":{
+          "description":"The local path to the Folder where the rendered images are placed",
+          "type":"string"
+        },
+        "operations":{
+          "description":"The Render-operations that are to be done with the files",
+          "type":"array",
+          "items":{
+            "$ref":"RenderOperation"
+          }
+        }
+      },
+      "required":["inputFolder","outputFolder","operations"]
+    },
+    "RenderOperation":{
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "RenderOperation",
+      "description": "A Render operation consisting of the Render details and the amount of pictures to render",
+      "type": "object",
+      "properties":{
+        "simulationSpeed":{
+          "description":"The speed at which the simulation is run. A higher speed can lead to inaccurate physics simulation but will result in faster renders.",
+          "type":"number",
+          "minimumInclusive":0,
+          "default":1
+        },
+        "simulationTime":{
+          "description":"The Time that the physics Simulation will run for. This time does not need to be adjusted when the simulation speed is changed. This time is always assumes a Simulation speed of 1 and is adjusted internally. A Negative value means the Object is snapped to the ground and rendered immediately",
+          "type":"number"
+        },
+        "amount":{
+          "description":"The amount of images that are to be rendered with these settings",
+          "type":"integer",
+          "minimum":0
+        },
+        "rotationType":{
+          "description": "The type of Rotation that is needed. The Options are Random,Initial, Custom, Computed.",
+          "enum" : ["random","initial","custom","computed"]
+        },
+        "rotation":{
+          "type":"object",
+          "properties":{
+            "x":{
+              "description":"rotation along the x axis",
+              "type":"number"
+            },
+            "y":{
+              "description":"rotation along the y axis",
+              "type":"number"
+            },
+            "z":{
+              "description":"rotation along the z axis",
+              "type":"number"
+            }
+          },
+          "required":["x","y","z"],
+          "default":{"x":0,"y":0,"z":0}
+        }
+      },
+      "required":["simulationTime","amount","rotationType"]
+    }
+  },
+  "$ref":"RenderInformation"
+}
+
