@@ -5,8 +5,8 @@
     {
       "simulationTime":1,
       "simulationSpeed":99,
-      "amount":15,
-      "rotationType":"random"
+      "amount":1,
+      "rotationType":"initial"
     }
   ]
 }
