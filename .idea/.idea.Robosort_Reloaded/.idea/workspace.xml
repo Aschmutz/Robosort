@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569c0509-f1f4-4a1d-90a6-692b0a92e221" name="Changes" comment="Finalized the URP switch and implemented SSAO">
+    <list default="true" id="569c0509-f1f4-4a1d-90a6-692b0a92e221" name="Changes" comment="Implemented Random Colours for the Models">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Robosort_Reloaded/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robosort_Reloaded/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rendering.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rendering.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rendering.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rendering.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Renderer.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Renderer.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Volume.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced-Volume.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Volume.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Volume.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant-Renderer.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant-Renderer.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant-Volume.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant-Volume.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/renderConfiguratoin.json" beforeDir="false" afterPath="$PROJECT_DIR$/renderConfiguratoin.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709024435179</updated>
       <workItem from="1709024438616" duration="3863000" />
-      <workItem from="1709031985075" duration="9575000" />
+      <workItem from="1709031985075" duration="10823000" />
     </task>
     <task id="LOCAL-00001" summary="Added new git ignore">
       <created>1709031134599</created>
@@ -134,7 +118,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709053624679</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finalized the URP switch and implemented SSAO">
+      <created>1709133515763</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709133515763</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implemented Random Colours for the Models">
+      <created>1709134310380</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709134310380</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +171,7 @@
     <MESSAGE value="FIxed the project to work correctly in the URP (SSAO still missing)" />
     <MESSAGE value="Finalized the URP swithch and implemented SSAO" />
     <MESSAGE value="Finalized the URP switch and implemented SSAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalized the URP switch and implemented SSAO" />
+    <MESSAGE value="Implemented Random Colours for the Models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Random Colours for the Models" />
   </component>
 </project>
