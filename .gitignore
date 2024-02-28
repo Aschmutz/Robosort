@@ -76,3 +76,4 @@ crashlytics-build.properties
 /Renderd Images/*
 /Rendered Images/*
 /Assets/Render Environment/autosave/
+renderConfiguratoin.json
