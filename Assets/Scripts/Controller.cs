@@ -47,7 +47,9 @@ public class Controller : MonoBehaviour
     private RenderInformation[] modelsToRender;
     void Start()
     {
+        Console.WriteLine("Reading the Input Files");
         modelsToRender = ParametersToRenderInformationArray(parameterPath);
+        Console.WriteLine("Starting the Render");
         StartCoroutine(RenderAllModels());
 
     }
@@ -71,6 +73,7 @@ public class Controller : MonoBehaviour
                 if (loaded == null)
                 {
                     Debug.Log("Skipping " + information.modelPath);
+                    Console.WriteLine("Skipping " + information.modelPath);
                     continue;
                 }
                 
@@ -153,7 +156,7 @@ public class Controller : MonoBehaviour
         JsonDocument parametersJson = JsonDocument.Parse(parametersJsonText);
 
         //Validation Start
-        /*
+        
         //Loading the Schemas from the Resources folder, to allow for loading at Runtime in Standalone application.
         string renderInfoSchemaJson = Resources.Load<TextAsset>("Schemas/RenderInfoBundle").ToString();
         JsonSchema renderInfoSchema = JsonSchema.FromText(renderInfoSchemaJson);
@@ -183,12 +186,14 @@ public class Controller : MonoBehaviour
                     }
                 }
             }
-            Debug.Log(parametersJsonText);
-            Debug.Log(renderInfoSchemaJson);
+            /*Debug.Log(parametersJsonText);
+            Debug.Log(renderInfoSchemaJson);*/
             Debug.Log(errorText);
+            Console.WriteLine(errorText);
+            Application.Quit();
             return Array.Empty<RenderInformation>();
         }
-*/
+
         //Validation End
         
         RenderInformationJson renderInformationJson = parametersJson.Deserialize<RenderInformationJson>();

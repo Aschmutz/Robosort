@@ -55,9 +55,11 @@ public class Rendering : MonoBehaviour
         string fullPath = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar +path;
         Directory.CreateDirectory(fullPath);
         FileStream f;
-        f = new FileStream(fullPath+Path.DirectorySeparatorChar+prefix+id+".png", FileMode.Create, FileAccess.Write);
+        string filePath = fullPath + Path.DirectorySeparatorChar + prefix + id + ".png";
+        f = new FileStream(filePath, FileMode.Create, FileAccess.Write);
         await f.WriteAsync(imageData,0,imageData.Length);
         f.Close();
         Debug.Log("Succsessfuly wrote Pixel Data to PNG File");
+        Console.WriteLine("Saved: "+filePath+".png");
     }
 }
