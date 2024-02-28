@@ -113,7 +113,8 @@ public class Controller : MonoBehaviour
                 {
                     loaded.transform.position -= new Vector3(0,CalculateFloorDistance(loaded.GetComponent<MeshFilter>()),0);
                 }
-                
+
+                loaded.GetComponent<MeshRenderer>().material.color = Random.ColorHSV(0, 1, 0, 1, 0, 1, 1, 1);
                 
                 string modelName = information.modelPath[(information.modelPath.LastIndexOf(Path.DirectorySeparatorChar) + 1)..information.modelPath.LastIndexOf('.')];
                 string prefix = "m-"+modelName+"_op-"+operationId+"_id-"+i+"_img-";
