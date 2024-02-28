@@ -45,6 +45,8 @@ public class Controller : MonoBehaviour
     [SerializeField] private LayerMask environmentLayerMask;
     private string outputPath;
     private RenderInformation[] modelsToRender;
+    private static readonly int SpecColor = Shader.PropertyToID("_SpecColor");
+
     void Start()
     {
         Console.WriteLine("Reading the Input Files");
@@ -117,7 +119,10 @@ public class Controller : MonoBehaviour
                     loaded.transform.position -= new Vector3(0,CalculateFloorDistance(loaded.GetComponent<MeshFilter>()),0);
                 }
 
-                loaded.GetComponent<MeshRenderer>().material.color = Random.ColorHSV(0, 1, 0, 1, 0, 1, 1, 1);
+                Material m = loaded.GetComponent<MeshRenderer>().material;
+                
+                m.color = Random.ColorHSV(0, 1, 0, 1, 0.3f, 1, 1, 1);
+                m.SetColor(SpecColor,m.color);
                 
                 string modelName = information.modelPath[(information.modelPath.LastIndexOf(Path.DirectorySeparatorChar) + 1)..information.modelPath.LastIndexOf('.')];
                 string prefix = "m-"+modelName+"_op-"+operationId+"_id-"+i+"_img-";
