@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="569c0509-f1f4-4a1d-90a6-692b0a92e221" name="Changes" comment="Implemented Random Colours for the Models">
+    <list default="true" id="569c0509-f1f4-4a1d-90a6-692b0a92e221" name="Changes" comment="Updated Gitignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Robosort_Reloaded/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Robosort_Reloaded/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renderConfiguratoin.json" beforeDir="false" afterPath="$PROJECT_DIR$/renderConfiguratoin.json" afterDir="false" />
     </list>
@@ -95,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709024435179</updated>
       <workItem from="1709024438616" duration="3863000" />
-      <workItem from="1709031985075" duration="10823000" />
+      <workItem from="1709031985075" duration="10936000" />
     </task>
     <task id="LOCAL-00001" summary="Added new git ignore">
       <created>1709031134599</created>
@@ -132,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709134310380</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changed to project settings for the 1.0 Release Build on Windows">
+      <created>1709138434729</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709138434729</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated Gitignore">
+      <created>1709138491180</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709138491180</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +187,8 @@
     <MESSAGE value="Finalized the URP swithch and implemented SSAO" />
     <MESSAGE value="Finalized the URP switch and implemented SSAO" />
     <MESSAGE value="Implemented Random Colours for the Models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Random Colours for the Models" />
+    <MESSAGE value="Changed to project settings for the 1.0 Release Build on Windows" />
+    <MESSAGE value="Updated Gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Gitignore" />
   </component>
 </project>
