@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RenderInfoBundle Schema Documentation</title>
+    <style>
+        .schema {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .schema th, .schema td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .schema th {
+            background-color: #f2f2f2;
+        }
+
+        .required {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>RenderInfoBundle Schema Documentation</h1>
+
+<h2>RenderInformation ($id: RenderInfoBundle.json)</h2>
+<p><strong>Description:</strong> RenderInformation for the render Queue</p>
+<table class="schema">
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><a href="#RenderInformation">RenderInformation</a> (<strong>Required</strong>)</td>
+        <td>Reference to the nested RenderInformation schema definition.</td>
+    </tr>
+</table>
+
+<h2 id="RenderInformation">RenderInformation ($id: RenderInformation)</h2>
+<p><strong>Description:</strong> The Information for a RenderQueue</p>
+<table class="schema">
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td class="required">inputFolder</td>
+        <td>The local path to the Folder Containing the Alembic Models (<strong>Required</strong>).</td>
+    </tr>
+    <tr>
+        <td class="required">outputFolder</td>
+        <td>The local path to the Folder where the rendered images are placed (<strong>Required</strong>).</td>
+    </tr>
+    <tr>
+        <td class="required">operations</td>
+        <td>The Render-operations that are to be done with the files (<strong>Required</strong>).</td>
+    </tr>
+    <tr>
+        <td><a href="#RenderOperation">operations[]</a></td>
+        <td>Array of RenderOperation objects.</td>
+    </tr>
+</table>
+
+<h2 id="RenderOperation">RenderOperation ($id: RenderOperation)</h2>
+<p><strong>Description:</strong> A Render operation consisting of the Render details and the amount of pictures to render</p>
+<table class="schema">
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td class="required">simulationTime (Number)</td>
+        <td>The Time that the physics Simulation will run for (<strong>Required</strong>).</td>
+    </tr>
+    <tr>
+        <td class="required">amount (Integer)</td>
+        <td>The amount of images that are to be rendered with these settings (<strong>Required</strong>, minimum: 0).</td>
+    </tr>
+    <tr>
+        <td class="required">rotationType (Enum)</td>
+        <td>The type of Rotation that is needed. The Options are "random", "initial", "custom", "computed" (<strong>Required</strong>).</td>
+    </tr>
+    <tr>
+        <td>simulationSpeed (Number)</td>
+        <td>The speed at which the simulation is run (default: 1, minimum: 0).</td>
+    </tr>
+    <tr>
+        <td>rotation (Object)</td>
+        <td>The rotation of the object.</td>
+    </tr>
+</table>
+
+</body>
+</html>

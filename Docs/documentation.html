@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RenderInfoBundle Schema Documentation</title>
+    <style>
+        .collapsible {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #ccc;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<h1>RenderInfoBundle Schema Documentation</h1>
+
+<button class="collapsible">RenderInformation Bundle ($id: RenderInfoBundle.json)</button>
+<div class="content">
+    <p><strong>Description:</strong> RenderInformation for the render Queue</p>
+    <p><strong>$ref:</strong> <a href="#RenderInformation">RenderInformation</a></p>
+</div>
+
+<br>
+
+<button class="collapsible">RenderInformation ($id: RenderInformation)</button>
+<div class="content">
+    <p><strong>Description:</strong> The Information for a RenderQueue</p>
+    <p><strong>Type:</strong> object</p>
+    <p><strong>Required Properties:</strong> inputFolder, outputFolder, operations</p>
+    
+    <h4>Properties:</h4>
+    <ul>
+        <li><strong>inputFolder:</strong>
+            <ul>
+                <li><strong>Description:</strong> The local path to the Folder Containing the Alembic Models</li>
+                <li><strong>Type:</strong> string</li>
+            </ul>
+        </li>
+        <li><strong>outputFolder:</strong>
+            <ul>
+                <li><strong>Description:</strong> The local path to the Folder where the rendered images are placed</li>
+                <li><strong>Type:</strong> string</li>
+            </ul>
+        </li>
+        <li><strong>operations:</strong>
+            <ul>
+                <li><strong>Description:</strong> The Render-operations that are to be done with the files</li>
+                <li><strong>Type:</strong> array</li>
+                <li><strong>Items:</strong> <a href="#RenderOperation">RenderOperation</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<br>
+
+<button class="collapsible">RenderOperation ($id: RenderOperation)</button>
+<div class="content">
+    <p><strong>Description:</strong> A Render operation consisting of the Render details and the amount of pictures to render</p>
+    <p><strong>Type:</strong> object</p>
+    <p><strong>Required Properties:</strong> simulationTime, amount, rotationType</p>
+    
+    <h4>Properties:</h4>
+    <ul>
+        <li><strong>simulationSpeed:</strong>
+            <ul>
+                <li><strong>Description:</strong> The speed at which the simulation is run. A higher speed can lead to inaccurate physics simulation but will result in faster renders.</li>
+                <li><strong>Type:</strong> number</li>
+                <li><strong>Minimum Inclusive:</strong> 0</li>
+                <li><strong>Default:</strong> 1</li>
+            </ul>
+        </li>
+        <li><strong>simulationTime:</strong>
+            <ul>
+                <li><strong>Description:</strong> The Time that the physics Simulation will run for. This time does not need to be adjusted when the simulation speed is changed. This time is always assumes a Simulation speed of 1 and is adjusted internally. A Negative value means the Object is snapped to the ground and rendered immediately</li>
+                <li><strong>Type:</strong> number</li>
+            </ul>
+        </li>
+        <li><strong>amount:</strong>
+            <ul>
+                <li><strong>Description:</strong> The amount of images that are to be rendered with these settings</li>
+                <li><strong>Type:</strong> integer</li>
+                <li><strong>Minimum:</strong> 0</li>
+            </ul>
+        </li>
+    <li><strong>rotationType:</strong>
+        <ul>
+            <li><strong>Description:</strong> The type of Rotation that is needed. The Options are Random,Initial, Custom, Computed.</li>
+            <li><strong>Type:</strong> enum</li>
+            <li><strong>Options:</strong> "random", "initial", "custom", "computed"</li>
+        </ul>
+    </li>
+    <li><strong>rotation:</strong>
+        <ul>
+            <li><strong>Description:</strong> The rotation of the object</li>
+            <li><strong>Type:</strong> object</li>
+            <li><strong>Required Properties:</strong> x, y, z</li>
+            <p><strong>Sub-properties:</strong></p>
+            <ul>
+                <li><strong>x:</strong>
+                    <ul>
+                        <li><strong>Description:</strong> rotation along the x axis</li>
+                        <li><strong>Type:</strong> number</li>
+                    </ul>
+                </li>
+                <li><strong>y:</strong>
+                    <ul>
+                        <li><strong>Description:</strong> rotation along the y axis</li>
+                        <li><strong>Type:</strong> number</li>
+                    </ul>
+                </li>
+                <li><strong>z:</strong>
+                    <ul>
+                        <li><strong>Description:</strong> rotation along the z axis</li>
+                        <li><strong>Type:</strong> number</li>
+                    </ul>
+                </li>
+            </ul>
+            <li><strong>Default:</strong> {"x": 0, "y": 0, "z": 0}</li>
+        </ul>
+    </li>
+</ul>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
